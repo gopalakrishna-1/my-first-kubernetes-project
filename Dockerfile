@@ -1,7 +1,8 @@
 FROM centos:latest
 LABEL mail=vgkcivil@gmail.com
-RUN apt update -y
-RUN apt install -y apache2 \
+RUN yum update -y
+RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
+RUN yum install -y httpd \
 zip \
 unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page292/yogast.zip /var/www/html
