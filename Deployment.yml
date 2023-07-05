@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yogast-deployment
+  labels:
+    app: yogast
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: yogast
+  template:
+    metadata:
+      labels:
+        app: yogast
+    spec:
+      containers:
+      - name: krishna
+        image: vgkv1996/gopal
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
