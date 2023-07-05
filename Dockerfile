@@ -1,5 +1,6 @@
 FROM centos:latest
 LABEL mail=vgkcivil@gmail.com
+RUN yum update -y
 RUN yum install -y httpd \
 zip \
 unzip
