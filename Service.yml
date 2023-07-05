@@ -5,10 +5,11 @@ metadata:
   labels:
     app: yogast
 spec:
+  selector:
+    app: yogast
+  type: LoadBalancer  
   ports:
     - port: 8080
       targetport: 80
       nodeport: 31200
-  selector:
-    app: yogast
-  type: LoadBalancer  
+  
