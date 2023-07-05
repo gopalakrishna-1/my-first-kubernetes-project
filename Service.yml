@@ -6,7 +6,7 @@ metadata:
     app: yogast
 spec:
   ports:
-    - prot: 8080
+    - port: 8080
       targetport: 80
       nodeport: 31200
   selector:
