@@ -1,6 +1,5 @@
 FROM centos:latest
 LABEL mail=vgkcivil@gmail.com
-RUN yum update -y
 RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*
 RUN yum install -y httpd \
 zip \
